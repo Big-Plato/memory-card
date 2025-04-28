@@ -1,0 +1,15 @@
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.header h1 {
+    margin-left: 20px;
+}
+
+.score {
+    text-align: end;
+    margin-right: 20px;
+}
