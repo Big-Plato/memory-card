@@ -1,0 +1,55 @@
+.card {
+  color: var(--font-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+  border: 2px solid var(--font-color);
+  cursor: pointer;
+  font-family: "Courier New", Courier, monospace;
+  background-color: var(--main-bg);
+  border-radius: 10px;
+  box-shadow:
+    0 0 5px #1861ff,
+    0 0 10px #1c43ce,
+    0 0 10px #395fea,
+    0 0 20px #f686f6;
+  animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    box-shadow:
+      0 0 5px #16245c,
+      0 0 5px #16245c,
+      0 0 5px #16245c,
+      0 0 5px rgb(0, 55, 255);
+  }
+  to {
+    box-shadow:
+      0 0 10px #5dade2,
+      0 0 10px #5dade2,
+      0 0 10px #5dade2,
+      0 0 10px #5dade2;
+  }
+}
+
+.img-div {
+  width: 90%;
+  height: 180px;
+  border-radius: 10px;
+}
+
+.card h2 {
+  align-self: flex-start;
+  margin-left: 10px;
+  text-overflow: ellipsis;
+}
+
+.img-div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+}
