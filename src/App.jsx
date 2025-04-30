@@ -10,51 +10,51 @@ function App() {
     [
     {
       name: "Cygnus Hyoga",
-      img: "src/assets/hyoga.jpg",
+      img: "/assets/hyoga.jpg",
     },
     {
       name: "Pisces Aphrodite",
-      img: "src/assets/afrodite.jpg",
+      img: "/assets/afrodite.jpg",
     },
     {
       name: "Aquarius Camus",
-      img: "src/assets/camus.avif",
+      img: "/assets/camus.avif",
     },
     {
       name: "Polaris Hilda",
-      img: "src/assets/hilda.jpg",
+      img: "/assets/hilda.jpg",
     },
     {
       name: "Phoenix Ikki",
-      img: "src/assets/ikki.jpg",
+      img: "/assets/ikki.jpg",
     },
     {
       name: "Chameleon June",
-      img: "src/assets/june.webp",
+      img: "/assets/june.webp",
     },
     {
       name: "Gemini Kanon",
-      img: "src/assets/kanon.webp",
+      img: "/assets/kanon.webp",
     },
     {
       name: "Lizard Misty",
-      img: "src/assets/misty.PNG",
+      img: "/assets/misty.PNG",
     },
     {
       name: "Pegasus Seiya",
-      img: "src/assets/seiya.webp",
+      img: "/assets/seiya.webp",
     },
     {
       name: "Snake Shina",
-      img: "src/assets/shina.webp",
+      img: "/assets/shina.webp",
     },
     {
       name: "Drago Shiryu",
-      img: "src/assets/shiryu.webp",
+      img: "/assets/shiryu.webp",
     },
     {
       name: "Andromeda Shun",
-      img: "src/assets/shun.webp",
+      img: "/assets/shun.webp",
     },
   ];
   const [clicked, setClicked] = useState([]);
