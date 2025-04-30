@@ -1,13 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Grenze+Gotisch:wght@100..900&family=Nova+Square&family=Permanent+Marker&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+* {
+  font-family: var(--main-font);
+}
+
 #root {
   width: 100%;
-  /* margin: 0 auto; */
   text-align: center;
   height: 100vh;
   --main-bg: rgb(3, 6, 55);
-  --main-header: rgb(60, 7, 83);
+  --main-header: rgb(40, 36, 103);
   --card: rgb(114, 4, 85);
   --font-color: rgb(236, 223, 204);
   background-color: var(--main-bg);
+  --main-font: "Permanent Marker", cursive;
+  background: url("/src/assets/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 body {
