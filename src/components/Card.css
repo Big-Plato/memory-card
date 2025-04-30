@@ -10,12 +10,15 @@
   font-family: "Courier New", Courier, monospace;
   background-color: var(--main-bg);
   border-radius: 10px;
+}
+
+.card:hover {
   box-shadow:
-    0 0 5px #1861ff,
-    0 0 10px #1c43ce,
-    0 0 10px #395fea,
+    0 0 10px #1861ff,
+    0 0 15px #1c43ce,
+    0 0 15px #395fea,
     0 0 20px #f686f6;
-  animation: glow 1.5s infinite alternate;
+  animation: glow .8s infinite alternate;
 }
 
 @keyframes glow {
