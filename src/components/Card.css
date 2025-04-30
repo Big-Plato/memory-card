@@ -4,12 +4,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 0.8rem;
-  border: 2px solid var(--font-color);
+  font-size: 1.2rem;
+  border: 2px dotted var(--main-bg);
   cursor: pointer;
-  font-family: "Courier New", Courier, monospace;
+  font-weight: 100;
   background-color: var(--main-bg);
   border-radius: 10px;
+  box-shadow: 0 0 50px black;
+  opacity: 0.9;
 }
 
 .card:hover {
@@ -18,23 +20,23 @@
     0 0 15px #1c43ce,
     0 0 15px #395fea,
     0 0 20px #f686f6;
-  animation: glow .8s infinite alternate;
+  animation: glow 0.8s infinite alternate;
 }
 
 @keyframes glow {
   from {
     box-shadow:
-      0 0 5px #16245c,
-      0 0 5px #16245c,
-      0 0 5px #16245c,
-      0 0 5px rgb(0, 55, 255);
+      0 0 10px #16245c,
+      0 0 10px #16245c,
+      0 0 10px #16245c,
+      0 0 10px rgb(0, 55, 255);
   }
   to {
     box-shadow:
-      0 0 10px #5dade2,
-      0 0 10px #5dade2,
-      0 0 10px #5dade2,
-      0 0 10px #5dade2;
+      0 0 20px #5dade2,
+      0 0 20px #5dade2,
+      0 0 20px #5dade2,
+      0 0 20px #5dade2;
   }
 }
 
@@ -45,8 +47,8 @@
 }
 
 .card h2 {
+  font-family: fantasy;
   font-style: italic;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .img-div img {

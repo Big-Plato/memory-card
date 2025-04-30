@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Grenze+Gotisch:wght@100..900&family=Nova+Square&family=Permanent+Marker&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Grenze+Gotisch:wght@100..900&family=Nova+Square&family=Permanent+Marker&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap");
 
 * {
   font-family: var(--main-font);
@@ -14,7 +14,7 @@
   --font-color: rgb(236, 223, 204);
   background-color: var(--main-bg);
   --main-font: "Permanent Marker", cursive;
-  background: url("public/bg.jpg");
+  background: url("./public/bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -28,13 +28,36 @@ html {
 }
 
 .container {
-  margin-top: 20px;
-  width: 100%;
+  margin: 20px 20px 0 20px;
   height: 80%;
   display: grid;
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(6, 1fr);
-  background-color: var(--main-bg);
   justify-items: center;
   gap: 16px;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    grid-template-rows: repeat(auto, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .name-description p {
+    line-height: normal;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .container {
+    grid-template-rows: auto;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    grid-template-rows: auto;
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

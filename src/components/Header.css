@@ -2,22 +2,24 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  font-family: "Courier New", Courier, monospace;
   background-color: var(--main-header);
 }
 
 .header h1 {
   color: var(--font-color);
+  font-size: 2rem;
 }
 
 .name-description {
   margin-left: 10px;
-  line-height: .8rem;
+  line-height: 0.8rem;
   text-align: start;
 }
 
 .name-description p {
-  font-size: 1.2rem;
+  font-size: 1.7rem;
+  color: rgb(56, 216, 222);
+  --webkit-text-stroke: 2px brown;
 }
 
 .score {
@@ -25,3 +27,15 @@
   margin-right: 20px;
   color: var(--font-color);
 }
+
+@media screen and (max-width: 1200px) {
+  .name-description p {
+    line-height: normal;
+    font-size: 1rem;
+  }
+  .header {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: );

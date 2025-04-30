@@ -2,24 +2,23 @@ import "./App.css";
 import Header from "./components/Header.jsx";
 import Card from "./components/Card.jsx";
 import { useState } from "react";
-import hyoga from '../public/hyoga.jpg'
-import afrodite from '../public/afrodite.jpg'
-import misty from '../public/misty.PNG'
-import camus from '../public/camus.avif'
-import hilda from '../public/hilda.jpg'
-import ikki from '../public/ikki.jpg'
-import june from '../public/june.webp'
-import kanon from '../public/kanon.webp'
-import seiya from '../public/seiya.webp'
-import shina from '../public/shina.webp'
-import shiryu from '../public/shiryu.webp'
-import shun from '../public/shun.webp'
+import hyoga from "../public/hyoga.jpg";
+import afrodite from "../public/afrodite.jpg";
+import misty from "../public/misty.PNG";
+import camus from "../public/camus.avif";
+import hilda from "../public/hilda.jpg";
+import ikki from "../public/ikki.jpg";
+import june from "../public/june.webp";
+import kanon from "../public/kanon.webp";
+import seiya from "../public/seiya.webp";
+import shina from "../public/shina.webp";
+import shiryu from "../public/shiryu.webp";
+import shun from "../public/shun.webp";
 
 function App() {
   const [count, setCount] = useState(0);
   const [maxScore, setMaxScore] = useState(0);
-  const knights = 
-    [
+  const knights = [
     {
       name: "Cygnus Hyoga",
       img: hyoga,
@@ -71,7 +70,6 @@ function App() {
   ];
   const [clicked, setClicked] = useState([]);
   const [shuffle, setShuffle] = useState(knights);
-  
 
   const fisherYatesShuffle = (arr) => {
     for (let i = arr.length - 1; i > 0; i--) {
@@ -83,40 +81,39 @@ function App() {
 
   const checkScore = (score) => {
     if (score > maxScore) {
-      setMaxScore(score)
-    } 
-  }
+      setMaxScore(score);
+    }
+  };
 
   const handleCardClick = (e) => {
     setShuffle(fisherYatesShuffle(knights));
     if (clicked.includes(e.target.id)) {
-      console.log('rs');
+      console.log("rs");
       checkScore(count);
       setCount(0);
-      setClicked(clicked => []);
+      setClicked((clicked) => []);
     } else {
       setClicked([...clicked, e.target.id]);
       setCount(count + 1);
     }
-  }
+  };
 
   return (
     <>
-      <Header 
-        count={count} 
-        maxScore={maxScore}
-      />
+      <Header count={count} maxScore={maxScore} />
 
-      <div className="container" >
+      <div className="container">
         {shuffle.map((knight) => {
           const [name, img] = Object.values(knight);
-          return <Card 
-                    id={name}
-                    key={name} 
-                    name={name} 
-                    img={img} 
-                    onClick={handleCardClick} 
-                  />;
+          return (
+            <Card
+              id={name}
+              key={name}
+              name={name}
+              img={img}
+              onClick={handleCardClick}
+            />
+          );
         })}
       </div>
     </>
