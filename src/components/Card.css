@@ -10,7 +10,7 @@
   font-weight: 100;
   background-color: var(--main-bg);
   border-radius: 10px;
-  box-shadow: 0 0 50px black;
+  box-shadow: 5px 10px 8px #000000;
   opacity: 0.9;
 }
 

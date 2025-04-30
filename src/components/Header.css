@@ -12,7 +12,7 @@
 
 .name-description {
   margin-left: 10px;
-  line-height: 0.8rem;
+  line-height: .8rem;
   text-align: start;
 }
 
@@ -36,6 +36,5 @@
   .header {
     flex-direction: column;
   }
+  
 }
-
-@media screen and (max-width: );
