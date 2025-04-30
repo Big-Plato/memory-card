@@ -1,13 +1,14 @@
 import "./Header.css";
 import { useState } from "react";
 
-export default function Header() {
-  const [count, setCount] = useState(0);
-  const [maxScore, setMaxScore] = useState(0);
+export default function Header({count, maxScore}) {
 
   return (
     <div className="header">
-      <h1>Memory Game</h1>
+      <div className="name-description">
+        <h1>Saint Seiya Memory Game</h1>
+        <p>Whenever you click on a card, keep it in mind because you can't click on the same card again.</p>
+      </div>
       <div className="score">
         <p>Score: {count}</p>
         <p>Max Score: {maxScore}</p>
