@@ -42,14 +42,14 @@
 }
 
 .card h2 {
-  align-self: flex-start;
-  margin-left: 10px;
-  text-overflow: ellipsis;
+  font-style: italic;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .img-div img {
   width: 100%;
   height: 100%;
+  border-radius: 20px;
   object-fit: cover;
   aspect-ratio: 16 / 9;
 }
