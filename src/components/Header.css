@@ -7,8 +7,17 @@
 }
 
 .header h1 {
-  margin-left: 20px;
   color: var(--font-color);
+}
+
+.name-description {
+  margin-left: 10px;
+  line-height: .8rem;
+  text-align: start;
+}
+
+.name-description p {
+  font-size: 1.2rem;
 }
 
 .score {
