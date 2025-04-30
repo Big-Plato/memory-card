@@ -14,7 +14,7 @@
   --font-color: rgb(236, 223, 204);
   background-color: var(--main-bg);
   --main-font: "Permanent Marker", cursive;
-  background: url("./public/bg.jpg");
+  background: url("/bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
