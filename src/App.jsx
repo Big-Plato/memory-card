@@ -18,43 +18,43 @@ function App() {
     },
     {
       name: "Aquarius Camus",
-      img: "public/assets/camus.avif",
+      img: "assets/camus.avif",
     },
     {
       name: "Polaris Hilda",
-      img: "public/assets/hilda.jpg",
+      img: "assets/hilda.jpg",
     },
     {
       name: "Phoenix Ikki",
-      img: "public/assets/ikki.jpg",
+      img: "assets/ikki.jpg",
     },
     {
       name: "Chameleon June",
-      img: "public/assets/june.webp",
+      img: "assets/june.webp",
     },
     {
       name: "Gemini Kanon",
-      img: "public/assets/kanon.webp",
+      img: "assets/kanon.webp",
     },
     {
       name: "Lizard Misty",
-      img: "public/assets/misty.PNG",
+      img: "assets/misty.PNG",
     },
     {
       name: "Pegasus Seiya",
-      img: "public/assets/seiya.webp",
+      img: "assets/seiya.webp",
     },
     {
       name: "Snake Shina",
-      img: "public/assets/shina.webp",
+      img: "assets/shina.webp",
     },
     {
       name: "Drago Shiryu",
-      img: "public/assets/shiryu.webp",
+      img: "assets/shiryu.webp",
     },
     {
       name: "Andromeda Shun",
-      img: "public/assets/shun.webp",
+      img: "assets/shun.webp",
     },
   ];
   const [clicked, setClicked] = useState([]);
