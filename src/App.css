@@ -15,8 +15,8 @@
   background-color: var(--main-bg);
   --main-font: "Permanent Marker", cursive;
   background: url("/bg.jpg");
+  background-size:cover;
   background-repeat: no-repeat;
-  background-size: cover;
 }
 
 body {
@@ -38,6 +38,9 @@ html {
 }
 
 @media screen and (max-width: 1200px) {
+  #root {
+    height: 100%;
+  }
   .container {
     grid-template-rows: repeat(auto, 1fr);
     grid-template-columns: repeat(3, 1fr);
