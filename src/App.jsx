@@ -1,60 +1,65 @@
 import "./App.css";
 import Header from "./components/Header.jsx";
 import Card from "./components/Card.jsx";
-import { useEffect, useState } from "react"
+import { useState } from "react"
 
 function App() {
-  const [clicked, setClicked] = useState("");
-  const [shuffle, setShuffle] = useState([
+  const [count, setCount] = useState(0);
+  const [maxScore, setMaxScore] = useState(0);
+  const knights = 
+    [
     {
-      name: "Hyoga de Cisne",
+      name: "Cygnus Hyoga",
       img: "src/assets/hyoga.jpg",
     },
     {
-      name: "Afrodite de Peixes",
+      name: "Pisces Aphrodite",
       img: "src/assets/afrodite.jpg",
     },
     {
-      name: "Camus de Aquário",
+      name: "Aquarius Camus",
       img: "src/assets/camus.avif",
     },
     {
-      name: "Hilda de Polaris",
+      name: "Polaris Hilda",
       img: "src/assets/hilda.jpg",
     },
     {
-      name: "Ikki de fênix",
+      name: "Phoenix Ikki",
       img: "src/assets/ikki.jpg",
     },
     {
-      name: "June de Camaleão",
+      name: "Chameleon June",
       img: "src/assets/june.webp",
     },
     {
-      name: "Kanon de Gêmeos",
+      name: "Gemini Kanon",
       img: "src/assets/kanon.webp",
     },
     {
-      name: "Misty de Lagarto",
+      name: "Lizard Misty",
       img: "src/assets/misty.PNG",
     },
     {
-      name: "Seiya de Pégasus",
+      name: "Pegasus Seiya",
       img: "src/assets/seiya.webp",
     },
     {
-      name: "Shina de Cobra",
+      name: "Snake Shina",
       img: "src/assets/shina.webp",
     },
     {
-      name: "Shiryu de Dragão",
+      name: "Drago Shiryu",
       img: "src/assets/shiryu.webp",
     },
     {
-      name: "Shun de Andrômeda",
+      name: "Andromeda Shun",
       img: "src/assets/shun.webp",
     },
-  ]);
+  ];
+  const [clicked, setClicked] = useState([]);
+  const [shuffle, setShuffle] = useState(knights);
+  
 
   const fisherYatesShuffle = (arr) => {
     for (let i = arr.length - 1; i > 0; i--) {
@@ -64,18 +69,37 @@ function App() {
     return arr;
   };
 
-  const handleCardClick = (event) => {
-    setShuffle(fisherYatesShuffle(shuffle));
-    console.log(event.target);
+  const checkScore = (score) => {
+    if (score > maxScore) {
+      setMaxScore(score)
+    } 
+  }
+
+  const handleCardClick = (e) => {
+    setShuffle(fisherYatesShuffle(knights));
+    if (clicked.includes(e.target.id)) {
+      console.log('rs');
+      checkScore(count);
+      setCount(0);
+      setClicked(clicked => []);
+    } else {
+      setClicked([...clicked, e.target.id]);
+      setCount(count + 1);
+    }
   }
 
   return (
     <>
-      <Header />
+      <Header 
+        count={count} 
+        maxScore={maxScore}
+      />
+
       <div className="container" >
         {shuffle.map((knight) => {
           const [name, img] = Object.values(knight);
           return <Card 
+                    id={name}
                     key={name} 
                     name={name} 
                     img={img} 
