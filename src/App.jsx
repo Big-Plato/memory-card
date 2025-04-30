@@ -1,10 +1,11 @@
 import "./App.css";
 import Header from "./components/Header.jsx";
 import Card from "./components/Card.jsx";
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 function App() {
-  const knights = [
+  const [clicked, setClicked] = useState("");
+  const [shuffle, setShuffle] = useState([
     {
       name: "Hyoga de Cisne",
       img: "src/assets/hyoga.jpg",
@@ -53,7 +54,7 @@ function App() {
       name: "Shun de Andrômeda",
       img: "src/assets/shun.webp",
     },
-  ];
+  ]);
 
   const fisherYatesShuffle = (arr) => {
     for (let i = arr.length - 1; i > 0; i--) {
@@ -63,15 +64,19 @@ function App() {
     return arr;
   };
 
+  const handleCardClick = (event) => {
+    setShuffle(fisherYatesShuffle(shuffle));
+    console.log(event.target);
+  }
+
   return (
     <>
       <Header />
-      <div className="container">
-        {knights.map((knight, index) => {
-          console.log(knights);
+      <div className="container" >
+        {shuffle.map((knight) => {
           const [name, img] = Object.values(knight);
           return <Card 
-                    key={index} 
+                    key={name} 
                     name={name} 
                     img={img} 
                     onClick={handleCardClick} 
