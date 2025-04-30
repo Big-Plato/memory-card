@@ -2,6 +2,18 @@ import "./App.css";
 import Header from "./components/Header.jsx";
 import Card from "./components/Card.jsx";
 import { useState } from "react";
+import hyoga from '../public/hyoga.jpg'
+import afrodite from '../public/afrodite.jpg'
+import misty from '../public/misty.PNG'
+import camus from '../public/camus.avif'
+import hilda from '../public/hilda.jpg'
+import ikki from '../public/ikki.jpg'
+import june from '../public/june.webp'
+import kanon from '../public/kanon.webp'
+import seiya from '../public/seiya.webp'
+import shina from '../public/shina.webp'
+import shiryu from '../public/shiryu.webp'
+import shun from '../public/shun.webp'
 
 function App() {
   const [count, setCount] = useState(0);
@@ -10,51 +22,51 @@ function App() {
     [
     {
       name: "Cygnus Hyoga",
-      img: "dist/hyoga.jpg",
+      img: hyoga,
     },
     {
       name: "Pisces Aphrodite",
-      img: "dist/afrodite.jpg",
+      img: afrodite,
     },
     {
       name: "Aquarius Camus",
-      img: "dist/camus.avif",
+      img: camus,
     },
     {
       name: "Polaris Hilda",
-      img: "dist/hilda.jpg",
+      img: hilda,
     },
     {
       name: "Phoenix Ikki",
-      img: "dist/ikki.jpg",
+      img: ikki,
     },
     {
       name: "Chameleon June",
-      img: "dist/june.webp",
+      img: june,
     },
     {
       name: "Gemini Kanon",
-      img: "dist/kanon.webp",
+      img: kanon,
     },
     {
       name: "Lizard Misty",
-      img: "dist/misty.PNG",
+      img: misty,
     },
     {
       name: "Pegasus Seiya",
-      img: "dist/seiya.webp",
+      img: seiya,
     },
     {
       name: "Snake Shina",
-      img: "dist/shina.webp",
+      img: shina,
     },
     {
       name: "Drago Shiryu",
-      img: "dist/shiryu.webp",
+      img: shiryu,
     },
     {
       name: "Andromeda Shun",
-      img: "dist/shun.webp",
+      img: shun,
     },
   ];
   const [clicked, setClicked] = useState([]);
