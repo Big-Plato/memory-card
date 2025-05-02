@@ -28,13 +28,13 @@ A simple and fun memory card game built with React and Vite. Test your memory by
 To run this project locally:
 
 Clone the repository:
-
-bash
-git clone https://github.com/your-username/memory-game.git  
-Navigate to the project folder:
-
 ```bash
-cd memory-game  
+git clone https://github.com/your-username/memory-card.git  
+```
+
+Navigate to the project folder:
+```bash
+cd memory-card  
 ```
 
 Install dependencies:
@@ -47,7 +47,7 @@ Start the development server:
 npm run dev  
 ```
 
-Open your browser at http://localhost:3000 (or the port shown in the terminal).
+Open your browser at http://localhost:5173 (or the port shown in the terminal).
 
 ## Contributing
 1. Contributions are welcome! Follow these steps:
